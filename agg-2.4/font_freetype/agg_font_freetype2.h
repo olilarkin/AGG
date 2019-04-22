@@ -50,7 +50,7 @@ namespace fman {
 			unsigned glyph_index;
 			unsigned data_size;
 			glyph_data_type data_type;
-			rect_i bounds;
+			rect_d bounds;
 			double advance_x;
 			double advance_y;
 		};

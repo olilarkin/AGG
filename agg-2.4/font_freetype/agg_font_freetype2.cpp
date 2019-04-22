@@ -577,10 +577,7 @@ namespace fman {
 							rect_d bnd  = m_engine.m_path32.bounding_rect();
 							prepared->data_size = m_engine.m_path32.byte_size();
 							prepared->data_type = glyph_data_outline;
-							prepared->bounds.x1 = int(floor(bnd.x1));
-							prepared->bounds.y1 = int(floor(bnd.y1));
-							prepared->bounds.x2 = int(ceil(bnd.x2));
-							prepared->bounds.y2 = int(ceil(bnd.y2));
+							prepared->bounds = bnd;
 							prepared->advance_x = int26p6_to_dbl(m_ft_face->glyph->advance.x);
 							prepared->advance_y = int26p6_to_dbl(m_ft_face->glyph->advance.y);
 							m_affine.transform(&prepared->advance_x, &prepared->advance_y);
@@ -598,10 +595,7 @@ namespace fman {
 							rect_d bnd  = m_engine.m_path16.bounding_rect();
 							prepared->data_size = m_engine.m_path16.byte_size();
 							prepared->data_type = glyph_data_outline;
-							prepared->bounds.x1 = int(floor(bnd.x1));
-							prepared->bounds.y1 = int(floor(bnd.y1));
-							prepared->bounds.x2 = int(ceil(bnd.x2));
-							prepared->bounds.y2 = int(ceil(bnd.y2));
+							prepared->bounds = bnd;
 							prepared->advance_x = int26p6_to_dbl(m_ft_face->glyph->advance.x);
 							prepared->advance_y = int26p6_to_dbl(m_ft_face->glyph->advance.y);
 							m_affine.transform(&prepared->advance_x, &prepared->advance_y);
